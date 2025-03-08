@@ -1,9 +1,15 @@
-export default function Greet () {
+import {Fragment} from "react";
+
+function Greet ({name, email}) {
+
+  const username = `Francis`;
+
   return (
-    <div>
-      <h2>Hello There!</h2>
-      <p>Welcome of React Mastery. I find react library to be so amazing.</p>
-      <a href="#">Learn More</a>
-    </div>
+    <Fragment>
+      <p>Hello!, my name is {name}. My email is {email}</p>
+     
+    </Fragment>
   )
 }
+
+export default Greet
