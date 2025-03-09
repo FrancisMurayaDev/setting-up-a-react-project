@@ -1,25 +1,29 @@
-import Button from "./Components/Button/Button";
-import Greet from "./Components/Greet/Greet";
-import BookCategoryCard from "./Components/BookCategoryCard/BookCategoryCard";
-import {Fragment} from "react";
-import AddNumbers from "./Components/AddNumbers/AddNumbers";
+function Greet ({userName}) {
+if (userName === undefined) {
+  return <h1>Hello Guest</h1>;
+} else {
+  return <h1> Hello {userName}</h1>;
+}
+}
+
+function DisplayVideo ({age}) {
+  if (age <= 17) {
+    return <p>Access Denied, Go and watch Tom and Jerry!</p>
+  } else {
+    return <iframe width="560" height="315" src="https://www.youtube.com/embed/G1p6rlDCxq0?si=Qlv0iyHOCOniXUFb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  }
+}
 
 function App () {
-  // const person1 = `John Doe`;
-  // const person2 = `Martin Cruz`;
-  // const person3 = 'Joe Doe';
-  return (
-    <Fragment>
-    
-      {/* <Greet name = {person1} email = 'email@.com' />
-      <Greet name = {person2} email = {`email`} />
-      <Greet name = {person3}/> */}
-
-      <AddNumbers number1={5} number2={8}/>
-      <AddNumbers number1={89} number2={89} />
-
-    </Fragment>
-  )
+ return (
+  <>
+  <Greet />
+  <Greet userName='Kamau' />
+  <Greet userName={`Jose`} />
+  <DisplayVideo age={12}/>
+  <DisplayVideo age={22}/>
+  </>
+ )
 }
 
 export default App;

@@ -1,6 +1,6 @@
 import {Fragment} from "react";
 
-function Greet ({name, email}) {
+function Greet (props) {
 
   const username = `Francis`;
 
