@@ -1,5 +1,6 @@
+import "./Button.css"
 export default function Button () {
   return (
-    <button>Click Me</button>
+    <button className="btn">Click Me</button>
   )
 }

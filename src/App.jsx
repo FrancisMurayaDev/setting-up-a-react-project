@@ -1,3 +1,5 @@
+import Button from "./Components/Button/Button";
+
 function Greet ({userName}) {
 if (userName === undefined) {
   return <h1>Hello Guest</h1>;
@@ -17,11 +19,13 @@ function DisplayVideo ({age}) {
 function App () {
  return (
   <>
-  <Greet />
+  {/* <Greet />
   <Greet userName='Kamau' />
   <Greet userName={`Jose`} />
   <DisplayVideo age={12}/>
-  <DisplayVideo age={22}/>
+  <DisplayVideo age={22}/> */}
+
+  <Button />
   </>
  )
 }
